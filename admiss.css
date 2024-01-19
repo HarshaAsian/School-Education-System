@@ -1,0 +1,27 @@
+h3{
+  font-family: Calibri;
+  font-size: 25pt;
+  font-style: normal;
+  font-weight: bold;
+  color:SlateBlue;
+  text-align: center;
+  text-decoration: underline
+}
+body{
+  background-image: url("D:/School Education System/admiss.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+table{
+  font-family: Calibri;
+  color:white;
+  font-size: 11pt;
+  font-style: normal;
+  font-weight: bold;
+  text-align:;
+  background-image: url("D:/School Education System/wel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-collapse: collapse;
+  border: 2px solid navy;
+}

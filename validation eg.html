@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Book an appointment</title>
+		<style>
+		.div1
+		{
+			text-align: center;
+		}
+		.button
+		{
+			background-color: brown;
+			border:none;
+			color: white;
+			padding: 15px 32px;
+  			text-align: center;
+  			text-decoration: none;
+			border-radius: 500%;
+		}
+		 </style>
+		<script language="javascript">
+			function validate()
+			{
+				val=true;
+				var pn=document.getElementById("pn");
+				var ph=document.getElementById("ph");
+				var em=document.getElementById("em");
+				var pat=/^[A-Za-z]+$/;
+				var phoneno = /^\d{10}$/;
+				var reg=/^[A-Za-z0-9.]+\@[a-zA-Z0-9-.]+\.[A-Za-z{2,4}]+$/;
+				
+    			if(pn.value.trim()=='')
+				{
+                    pn.style.border="1px solid red";
+                    document.getElementById("i1").innerHTML="enter the name of the patient!";
+                    val=false;
+                }
+				else if(!pat.test(pn.value))
+				{
+                    document.getElementById("i1").innerHTML="enter valid name!";
+                    val=false;
+                }
+                else
+				{
+                    pn.style.border="";
+                    document.getElementById("i1").innerHTML="";
+                }
+				
+				
+				if(ph.value.trim()=='')
+				{
+                    ph.style.border="1px solid red";
+                    document.getElementById("i2").innerHTML="enter phone no!";
+                    val=false;
+                }
+                else if(!phoneno.test(ph.value))
+				{
+                    document.getElementById("i2").innerHTML="enter valid phone no!";
+                    val=false;
+                }
+                else
+				{
+                    em.style.border="2px";
+                    document.getElementById("i2").innerHTML="";
+                }
+
+				if(em.value.trim()=='')
+				{
+                    em.style.border="1px solid red";
+                    document.getElementById("i3").innerHTML="enter email id!";
+                    val=false;
+                }
+                else if(!reg.test(em.value))
+				{
+					em.style.border="1px solid red";
+                    document.getElementById("i3").innerHTML="enter valid email id!";
+                    val=false;
+                }
+                else
+				{
+                    em.style.border="2px";
+                    document.getElementById("i3").innerHTML="";
+                }
+				return val;
+			}
+		 </script>
+	</head>
+	<body>
+	    <img src="C:\Users\SREYA\Downloads\book.jpg" width="1100" height="600"><br>
+		
+	<form name="form" onsubmit="return validate()" action="img.html" target="_bottom">
+				<div class="div1">
+				<h1 text-align="center">Personal Information</h1>
+				
+				<input type="text" placeholder="patient/visitor name*" name="pn" id="pn" style="font-size:16pt" ><span id="i1" font-color="red"></span><br>
+				<p style="font-size:22px;"><b>Gender</b></p>
+				<input type="radio" id="name" name="lang">
+				<label>Male</label>
+				<input type="radio" id="name" name="lang">
+				<label>Female</label>
+				<input type="radio" id="name" name="lang">
+				<label>Others</label><br><br><br>
+				<input type="text"placeholder="phone number*" name="ph" id="ph" style="font-size:16pt"><span id="i2" ></span><br><br><br>
+				<input type="text"placeholder="email address*" name="em" id="em" style="font-size:16pt"><span id="i3" ></span><br><br><br>
+				<select id="id1" name="dropdown" value="Select your Location" style="font-size:16pt">
+					<option value="Select your location">-Select your location-</option>
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Telangana">Telangana</option>
+					<option value="Kerala">Kerala</option>
+					<option value="Tamil nadu">Tamil nadu</option>
+					<option value="Goa">Goa</option>
+					<option value="Bengaluru">Bengaluru</option>
+				</select><br><br><br>
+				<h1 text-align="center">Appointment Schedule</h1>
+				<select id="id2" name="dropdown" value="Select Speciality" style="font-size:16pt">
+					<option value="Speciality">-Select Speciality-</option>
+					<option value="Orthopedics">Orthopedics</option>
+					<option value="Pediatrics">Pediatrics</option>
+					<option value="Dermatology">Dermatology</option>
+					<option value="ENT">ENT</option>
+					<option value="Gynecology">Gynecology</option>
+					<option value="Obstetrics">Obstetrics</option>
+				</select><br><br><br>
+				<select id="id3" name="dropdown" value="Select a doctor" style="font-size:16pt">
+					<option value="Select your location">-Select a doctor-</option>
+					<option value="Select your location">Dr M Pratap</option>
+					<option value="Select your location">Dr S Laxmi</option>
+					<option value="Select your location">Dr K Kiran</option>
+					<option value="Select your location">Dr P Suma</option>
+					<option value="Select your location">Dr T Sunitha</option>
+					<option value="Select your location">Dr R Hema</option>
+				</select><br><br><br>
+                <input type="date" placeholder="Appointment Date*" required="fill the field" style="font-size:16pt"><br><br><br>
+				<input type="time"placeholder="Appointment time*" required="fill the field" style="font-size:16pt"><br><br><br>
+				<input type="submit" class="button" value="Submit" style="font-size: 16pt";>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="submit" class="button" value="Clear" style="font-size: 16pt";><br><br><br><br><br><br><br><br><br><br><br><br>
+				
+			</form>
+		</div>
+	</body>
+</html>

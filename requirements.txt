@@ -1,0 +1,3 @@
+A school website has two essential functions. 
+The first is an online database for current students, parents and faculty. 
+The second is a showcase of the school at its best to encourage prospective students and parents to enroll.
